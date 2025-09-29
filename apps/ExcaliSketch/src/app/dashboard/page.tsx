@@ -200,7 +200,7 @@ export default function Dashboard() {
             <Link href={"/"}>
               <div className="flex items-center space-x-2">
                 <SiExcalidraw className=" w-10 h-10" />
-                <span className="text-2xl font-bold ">ExcaliSketch </span>
+                <span className="text-2xl font-bold ">ExcaliDraw </span>
               </div>
             </Link>
             <div className="flex items-center space-x-4">

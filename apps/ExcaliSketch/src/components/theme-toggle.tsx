@@ -10,12 +10,11 @@ export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
 
-  // Avoid hydration mismatch by waiting until the component is mounted
   React.useEffect(() => {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null; // Prevents incorrect icon rendering on first load
+  if (!mounted) return null;
 
   return (
     <Button
@@ -24,9 +23,9 @@ export function ThemeToggle() {
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
       {theme === "light" ? (
-        <Sun className="h-5 w-5 text-yellow-500" />
+        <Sun className="h-5 w-5 text-yellow-500" suppressHydrationWarning />
       ) : (
-        <Moon className="h-5 w-5 text-gray-300" />
+        <Moon className="h-5 w-5 text-gray-300" suppressHydrationWarning />
       )}
       <span className="sr-only">Toggle theme</span>
     </Button>
