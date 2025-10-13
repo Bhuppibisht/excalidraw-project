@@ -17,17 +17,18 @@ export function ThemeToggle() {
   if (!mounted) return null;
 
   return (
-    <Button
-      variant="ghost"
-      size="icon"
-      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-    >
-      {(theme === "light" || theme == null || theme == undefined )? (
-        <Sun className="h-5 w-5 text-yellow-500" suppressHydrationWarning />
-      ) : (
-        <Moon className="h-5 w-5 text-gray-300" suppressHydrationWarning />
-      )}
-      <span className="sr-only">Toggle theme</span>
-    </Button>
+   <Button
+  variant="ghost"
+  size="icon"
+  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+>
+  {theme === "dark" ? (
+    <Moon className="h-5 w-5 text-gray-300" />
+  ) : (
+    <Sun className="h-5 w-5 text-yellow-500" />
+  )}
+  <span className="sr-only">Toggle theme</span>
+</Button>
+
   );
 }

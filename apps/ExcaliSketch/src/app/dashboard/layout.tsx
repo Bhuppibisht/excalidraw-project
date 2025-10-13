@@ -7,7 +7,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ThemeProvider>
+    <ThemeProvider >
       <ToastProvider>
         {children} <ToastContainer></ToastContainer>{" "}
         <ToastViewport></ToastViewport>
