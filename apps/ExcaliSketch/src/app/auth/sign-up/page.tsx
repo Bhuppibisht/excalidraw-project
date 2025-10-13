@@ -86,7 +86,7 @@ export default function SignUp() {
           <div>
             <label
               htmlFor="name"
-              className="block text-sm font-medium text-gray-700 mb-1"
+              className="block text-sm font-medium text-black mb-1"
             >
               Full Name
             </label>
@@ -97,7 +97,7 @@ export default function SignUp() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="w-full text-white"
+              className="w-full text-black"
             />
           </div>
 
@@ -115,14 +115,14 @@ export default function SignUp() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full text-white"
+              className="w-full text-black"
             />
           </div>
 
           <div className="relative">
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-gray-700 mb-1"
+              className="block text-sm font-medium text-black mb-1"
             >
               Password
             </label>
@@ -133,7 +133,7 @@ export default function SignUp() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full text-white"
+              className="w-full text-black"
             />
             <span
               onClick={() => setShowPassword(!showPassword)}
