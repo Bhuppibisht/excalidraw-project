@@ -44,11 +44,13 @@ const allowedOrigins = [
 app.use(
   cors({
     origin: (origin, callback) => {
+      // Allow requests with no origin (mobile apps, Postman, etc.)
       if (!origin) return callback(null, true);
 
       if (allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
+        console.log(`CORS blocked origin: ${origin}`);
         callback(new Error("Not allowed by CORS"));
       }
     },
@@ -58,6 +60,7 @@ app.use(
   })
 );
 
+// Important: Apply limiter AFTER CORS
 app.use(limiter);
 app.use(morgan("common", { stream: logStream }));
 app.use(express.json());
@@ -81,7 +84,7 @@ server.listen(PORT, () => {
 
 cron.schedule("*/14 * * * *", async () => {
   try {
-    const res = await axios.get(`http://localhost:10000`);
+    const res = await axios.get(`http://localhost:${PORT}`);
     console.log(res.data);
   } catch (e) {
     console.error(e);
