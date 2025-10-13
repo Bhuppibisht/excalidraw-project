@@ -75,7 +75,7 @@ export default function SignIn() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-black mb-1"
+                className="block text-sm font-medium text-gray-700 mb-1"
               >
                 Email
               </label>
@@ -93,7 +93,7 @@ export default function SignIn() {
             <div className="relative">
               <label
                 htmlFor="password"
-                className="block text-sm font-medium text-black mb-1"
+                className="block text-sm font-medium text-gray-700 mb-1"
               >
                 Password
               </label>
@@ -108,7 +108,7 @@ export default function SignIn() {
               />
               <span
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-2 top-1/2 transform -translate-y-1/5 text-black cursor-pointer"
+                className="absolute right-2 top-1/2 transform -translate-y-1/5 text-gray-600 cursor-pointer"
               >
                 {showPassword ? (
                   <img src="/icons/eye.png" alt="Show" width={25} />

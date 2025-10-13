@@ -86,7 +86,7 @@ export default function SignUp() {
           <div>
             <label
               htmlFor="name"
-              className="block text-sm font-medium text-black mb-1"
+              className="block text-sm font-medium text-gray-700 mb-1"
             >
               Full Name
             </label>
@@ -122,7 +122,7 @@ export default function SignUp() {
           <div className="relative">
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-black mb-1"
+              className="block text-sm font-medium text-gray-700 mb-1"
             >
               Password
             </label>
