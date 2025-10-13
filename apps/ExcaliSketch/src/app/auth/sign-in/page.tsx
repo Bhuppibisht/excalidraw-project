@@ -86,7 +86,7 @@ export default function SignIn() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full text-white"
+                className="w-full text-black"
               />
             </div>
 
@@ -104,7 +104,7 @@ export default function SignIn() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="w-full text-white"
+                className="w-full text-black"
               />
               <span
                 onClick={() => setShowPassword(!showPassword)}
