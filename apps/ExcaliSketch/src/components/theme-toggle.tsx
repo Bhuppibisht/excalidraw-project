@@ -22,7 +22,7 @@ export function ThemeToggle() {
       size="icon"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
-      {theme === "light" ? (
+      {(theme === "light" || theme == null || theme == undefined )? (
         <Sun className="h-5 w-5 text-yellow-500" suppressHydrationWarning />
       ) : (
         <Moon className="h-5 w-5 text-gray-300" suppressHydrationWarning />
