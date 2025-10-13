@@ -29,7 +29,7 @@ function checkUser(token: string): string | null {
     return decoded?.userId ?? null;
   } catch (error) {
     if (error instanceof jwt.JsonWebTokenError) {
-      console.error(`JWT Error: ${error.message}`); // Log the error message
+      console.error(`JWT Error: ${error.message}`); 
     } else {
       console.error("JWT verification failed:", error);
     }
